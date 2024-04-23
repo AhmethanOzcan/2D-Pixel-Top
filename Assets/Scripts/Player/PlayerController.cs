@@ -12,6 +12,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] float dashTime = 0.5f;
     [SerializeField] float dashCD = 1f;
     [SerializeField] TrailRenderer myTrailRenderer;
+    [SerializeField] private Transform WeaponCollider;
+    [SerializeField] private Transform SlashAniSpawn;
     PlayerControls playerControls;
     Vector2 movement;
     Rigidbody2D myRigidbody;
@@ -93,5 +95,15 @@ public class PlayerController : Singleton<PlayerController>
         myTrailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCD);
         dashing = false;
+    }
+
+    public Transform GetWeaponCollider()
+    {
+        return WeaponCollider;
+    }
+
+    public Transform GetSlashAniSpawn()
+    {
+        return SlashAniSpawn;
     }
 }

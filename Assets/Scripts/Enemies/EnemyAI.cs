@@ -10,10 +10,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float roamChangeDirFloat = 2f;
     State state;
     EnemyPathFinding enemyPathFinding;
+
     private void Awake() {
         enemyPathFinding = GetComponent<EnemyPathFinding>();
         state = State.Roaming;
-
     }
 
     private void Start() {

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 4455098663042268468}
   - component: {fileID: 6754387970351511642}
   - component: {fileID: 3961532890301953189}
+  - component: {fileID: 7321127321516517989}
+  - component: {fileID: 273441135823816534}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -166,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c516c8f55f522542aab3b9ba8e5296e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
 --- !u!114 &530053091711011569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHealth: 10
   deathVFXPrefab: {fileID: 8482016601791174906, guid: e2be1c933de37b345bdfcb22fbcbb411, type: 3}
+  knockBackThrust: 1
 --- !u!114 &6754387970351511642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +224,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: be0302bbaf64a7b429b3f0e2d9a73027, type: 2}
   restoreDefaultMatTime: 0.1
+--- !u!95 &7321127321516517989
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244513780220590376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e25bdde711043c947b855d7717f6fdca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &273441135823816534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244513780220590376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b72a120136059c24ea48693e4fe08574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8701854688544618043
 GameObject:
   m_ObjectHideFlags: 0
