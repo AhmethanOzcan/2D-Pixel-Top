@@ -43,14 +43,14 @@ public class Projectile : MonoBehaviour
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructible indestructible = other.gameObject.GetComponent<Indestructible>();
         PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-        if(!other.isTrigger && (enemyHealth || indestructible || (player && isEnemyProjectile)))
+        if(!other.isTrigger)
         {
-            if(player && isEnemyProjectile)
+            if((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile) || indestructible)
             {
-                player.TakeDamage(3,5f, this.transform);
+                player?.TakeDamage(3,5f, this.transform);
+                Instantiate(particleOnHitVFX,transform.position,transform.rotation);
+                Destroy(gameObject);
             }
-            Instantiate(particleOnHitVFX,transform.position,transform.rotation);
-            Destroy(gameObject);
         }
     }
 }

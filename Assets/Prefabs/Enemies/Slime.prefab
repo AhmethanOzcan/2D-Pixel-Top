@@ -169,6 +169,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamChangeDirFloat: 2
+  collusionDamage: 3
+  collusionKnockback: 2
+  shootingRange: 0
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopWhileAttacking: 0
 --- !u!114 &530053091711011569
 MonoBehaviour:
   m_ObjectHideFlags: 0
