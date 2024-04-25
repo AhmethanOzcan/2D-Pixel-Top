@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float collusionKnockback = 2f;
     [SerializeField] float shootingRange = 5f;
     [SerializeField] MonoBehaviour enemyType;
-    [SerializeField] float attackCooldown = 2f;
+    [SerializeField] float attackCooldown = 4f;
     [SerializeField] bool stopWhileAttacking = false;
     float timeRoaming = 0f;
     bool canAttack = true;

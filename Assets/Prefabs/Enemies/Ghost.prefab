@@ -171,9 +171,9 @@ MonoBehaviour:
   roamChangeDirFloat: 2
   collusionDamage: 4
   collusionKnockback: 2
-  aggroRange: 5
+  shootingRange: 10
   enemyType: {fileID: 8852853352770274850}
-  attackCooldown: 2
+  attackCooldown: 4
   stopWhileAttacking: 1
 --- !u!114 &3269732332802605661
 MonoBehaviour:
@@ -255,6 +255,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 9061797629261233678, guid: b9e07376f4ef89b43b7cd39174be5ef4, type: 3}
+  bulletSpeed: 5
+  burstCount: 3
+  timeBetweenBurst: 0.5
+  projectilesPerBurst: 5
+  angleSpread: 60
+  startingDistance: 0.1
 --- !u!1 &6774927914618172654
 GameObject:
   m_ObjectHideFlags: 0

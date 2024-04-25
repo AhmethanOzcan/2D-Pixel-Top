@@ -33,6 +33,11 @@ public class Projectile : MonoBehaviour
         this.projectileRange = projectileRange;
     }
 
+    public void UpdateProjectileSpeed(float moveSpeed)
+    {
+        this.moveSpeed = moveSpeed;
+    }
+
 
     private void MoveProjectile()
     {
