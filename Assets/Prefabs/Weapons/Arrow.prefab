@@ -289,8 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f2dcfe0c247004bbcfdf3ab0da6896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 22
+  moveSpeed: 15
   particleOnHitVFX: {fileID: 8482016601791174906, guid: 4d74d4fd3266ed947903908a56ea1eb1, type: 3}
+  projectileRange: 10
+  isEnemyProjectile: 0
 --- !u!114 &7316258993164473021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,5 +305,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c85d70407e56e44796aa6fc6ecfb05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
-  knockBackAmount: 5
