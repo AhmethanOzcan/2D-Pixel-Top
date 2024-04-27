@@ -187,7 +187,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6262871465847059723, guid: 33a8ee3e67ca79c4ca2559d3b8eb247d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1150103337}
   m_SourcePrefab: {fileID: 100100000, guid: 33a8ee3e67ca79c4ca2559d3b8eb247d, type: 3}
 --- !u!4 &56250763 stripped
 Transform:
@@ -8533,6 +8536,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2304835530819635285, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
+      propertyPath: m_Name
+      value: Stamina Globe Image
+      objectReference: {fileID: 0}
     - target: {fileID: 2328971822083980788, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -8560,6 +8567,10 @@ PrefabInstance:
     - target: {fileID: 2509215038441714404, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514664377859359277, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
+      propertyPath: m_Name
+      value: Stamina Globe Image
       objectReference: {fileID: 0}
     - target: {fileID: 2570014370851757776, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8612,6 +8623,10 @@ PrefabInstance:
     - target: {fileID: 4329655219367835085, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
       propertyPath: m_Name
       value: Gold Amount Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533835338969162281, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
+      propertyPath: m_Name
+      value: Stamina Globe Image
       objectReference: {fileID: 0}
     - target: {fileID: 5009111236742401895, guid: 91c82dfa9da80284eb8dbc600e647cde, type: 3}
       propertyPath: m_AnchorMax.y
@@ -52332,6 +52347,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30070f0424a0b774bbdef90a0bafecfc, type: 3}
+--- !u!1 &1150103327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6262871465847059723, guid: 33a8ee3e67ca79c4ca2559d3b8eb247d, type: 3}
+  m_PrefabInstance: {fileID: 50774294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1150103337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150103327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fff5c1e6e28c27458ee1b6691adeab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullStaminaImage: {fileID: 21300000, guid: 327011e91b2cc3948b0c89eebdd8f770, type: 3}
+  emptyStaminaImage: {fileID: 21300000, guid: 055d36d2e64ea274e85db23198eb447b, type: 3}
+  timeBetweenStaminaRefresh: 3
 --- !u!1001 &1151566643
 PrefabInstance:
   m_ObjectHideFlags: 0
