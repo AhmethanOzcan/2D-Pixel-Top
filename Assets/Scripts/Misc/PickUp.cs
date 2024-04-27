@@ -82,6 +82,7 @@ public class PickUp : MonoBehaviour
                 EconomyManager.Instance.UpdateCurrentGold(1);
                 break;
             case PickUpType.StaminaGlobe:
+                PlayerStamina.Instance.RefreshStamina();
                 break;
             case PickUpType.HealthGlobe:
                 int randomAmount = Random.Range(1,4);
