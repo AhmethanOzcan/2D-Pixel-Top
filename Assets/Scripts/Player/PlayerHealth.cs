@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
+    public bool IsDead {get; private set;}
     [SerializeField] int maxHealth = 10;
     [SerializeField] float knockBackThrustAmount = 10f;
     [SerializeField] float immunitySeconds = 1f;
@@ -17,6 +20,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     Slider healthSlider;
     bool canTakeDamage = true;
     const string HEALTH_TEXT = "Health Slider";
+    const string TOWN_TEXT = "Town";
+    readonly int DEATH_HASH = Animator.StringToHash("Death");
 
     protected override void Awake() {
         base.Awake();
@@ -25,6 +30,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     }
 
     private void Start() {
+        IsDead = false;
         currentHealth = maxHealth;
         UpdateHealthSlider();
     }
@@ -62,13 +68,23 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private void DetectDeath()
     {
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && !IsDead)
         {
             currentHealth = 0;
-            // Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
-            // Destroy(gameObject);
-            Debug.Log("You are dead!");
+            IsDead = true;
+            Destroy(ActiveWeapon.Instance.gameObject);
+            GetComponent<Animator>().SetTrigger(DEATH_HASH);
+            StartCoroutine(DeathLoadRoutine());            
+            
         }
+    }
+
+    private IEnumerator DeathLoadRoutine()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
+        PlayerStamina.Instance.ReplenishStaminaOnDeath();
+        SceneManager.LoadScene(TOWN_TEXT);
     }
 
     private IEnumerator ImmunityRoutine()

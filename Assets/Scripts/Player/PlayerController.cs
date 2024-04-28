@@ -38,12 +38,17 @@ public class PlayerController : Singleton<PlayerController>
     {
         playerControls.Combat.Dash.performed += _ => Dash();
         startingMovementSpeed = movementSpeed;
-
+        ActiveInventory.Instance.EquipStartingWeapon();
     }
 
     private void OnEnable() {
         playerControls.Enable();
     }
+
+    private void OnDisable() {
+        playerControls.Disable();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -69,7 +74,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        if(knockback.GettingKnockedBack)
+        if(knockback.GettingKnockedBack || PlayerHealth.Instance.IsDead)
             return;
         myRigidbody.MovePosition(myRigidbody.position + movement * (movementSpeed * Time.fixedDeltaTime));
     }

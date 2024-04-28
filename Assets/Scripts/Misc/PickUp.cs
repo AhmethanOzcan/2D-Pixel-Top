@@ -88,6 +88,8 @@ public class PickUp : MonoBehaviour
                 int randomAmount = Random.Range(1,4);
                 PlayerHealth.Instance.HealPlayer(randomAmount);
                 break;
+            default:
+                break;
         }
     }
 }
